@@ -1,10 +1,6 @@
 import React from 'react';
-import Assessment from 'material-ui/svg-icons/action/assessment';
-import Face from 'material-ui/svg-icons/action/face';
-import ThumbUp from 'material-ui/svg-icons/action/thumb-up';
-import ShoppingCart from 'material-ui/svg-icons/action/shopping-cart';
 // import globalStyles from '../styles';
-import Data from '../data';
+// import Data from '../data';
 
 class HomePage extends React.Component {
 
