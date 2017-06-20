@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import LeftDrawer from './components/LeftDrawer';
 import HomePage from './components/HomePage';
 import EventList from './containers/EventList';
+import EventDetail from './containers/EventDetail';
 import {LARGE, SMALL} from 'material-ui/utils/withWidth';
 import ThemeDefault from './components/theme-default';
 import Data from './data';
@@ -55,6 +56,7 @@ class App extends Component {
         <div style={styles.container}>
           <HomePage />
           <EventList />
+          <EventDetail />
         </div>        
       </div>
       </MuiThemeProvider>
