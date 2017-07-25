@@ -3,9 +3,6 @@ import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Navbar from './components/Navbar';
 import LeftDrawer from './components/LeftDrawer';
-import HomePage from './components/HomePage';
-import EventList from './containers/EventList';
-import EventDetail from './containers/EventDetail';
 import {LARGE, SMALL} from 'material-ui/utils/withWidth';
 import ThemeDefault from './components/theme-default';
 import Data from './data';
@@ -54,9 +51,6 @@ class App extends Component {
                     menus={Data.menus}
                     username="Current User"/>
         <div style={styles.container}>
-          <HomePage />
-          <EventList />
-          <EventDetail />
         </div>        
       </div>
       </MuiThemeProvider>

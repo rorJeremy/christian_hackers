@@ -1,5 +1,7 @@
 // import React from 'react';
 import React, { Component } from 'react';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import ThemeDefault from '../components/theme-default';
 import { connect } from 'react-redux';
 import { selectEvent } from '../actions/index';
 import { bindActionCreators } from 'redux';
@@ -7,6 +9,10 @@ import {List, ListItem} from 'material-ui/List';
 
 
 class EventList extends Component {
+  constructor(props) {
+    super(props);
+    this.renderList = this.renderList.bind(this);  
+  }
 
   renderList() {
     return this.props.events.map((event) => {
@@ -22,9 +28,15 @@ class EventList extends Component {
 
   render() {
     return (
-	    <List>
-      	{this.renderList()}
-	    </List>
+      <MuiThemeProvider muiTheme={ThemeDefault}>
+      <div>
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+          <List>
+            {this.renderList()}
+          </List>
+        </div>
+      </div>
+      </MuiThemeProvider>
     )
   }
 }
