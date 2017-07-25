@@ -1,9 +1,13 @@
 // A Reducer is just a function that returns a piece of the application’s state.
-export default function() {
-  return [
-    { title: 'Event1', description: 'First Event' },
-    { title: 'Event2', description: 'Second Event' },
-    { title: 'Event3', description: 'Third Event' },
-    { title: 'Event4', description: 'Fourth Event' }
-  ];
+import _ from "lodash";
+import { FETCH_EVENTS } from "../actions";
+
+export default function(state = {}, action) {
+  switch (action.type) {
+    case FETCH_EVENTS:
+    	console.log(action.payload.data); // [event1, event2]
+      return _.mapKeys(action.payload.data, "id");
+    default:
+      return state;
+  }
 }
